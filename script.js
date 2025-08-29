@@ -51,6 +51,14 @@ const contentData = {
                 <h2 class="text-2xl font-bold text-black mb-4">LinkedIn</h2>
                 <div class="space-y-6 text-gray-700">
                     <p>Connect with me on LinkedIn for professional updates and insights.</p>
+                    <div class="bg-gray-50 p-4 rounded-lg mb-4">
+                        <p class="text-sm text-gray-600 mb-2">My LinkedIn Profile:</p>
+                        <a href="https://www.linkedin.com/in/loshanparajuli/" 
+                           target="_blank" rel="noopener noreferrer" 
+                           class="text-blue-600 hover:text-blue-800 underline">
+                            View on LinkedIn
+                        </a>
+                    </div>
                     <div class="space-y-4">
                         <div class="border-l-4 border-black pl-4">
                             <h3 class="text-xl font-semibold text-black mb-2">Professional Experience</h3>

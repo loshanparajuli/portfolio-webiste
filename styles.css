@@ -34,14 +34,25 @@
     min-height: 400px;
 }
 
-/* Smooth gradient transition from white to creamy gray - only on left side */
-main {
-    background: #ffffff; /* Default white background */
+/* Center the default message on desktop */
+@media (min-width: 1025px) {
+    #rightContent .text-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        min-height: 400px;
+    }
 }
 
-/* Apply gradient only to the left side */
+/* Plain white background everywhere */
+main {
+    background: #ffffff;
+}
+
+/* No gradient - just plain white */
 .lg\:w-2\/5 {
-    background: linear-gradient(90deg, #ffffff 0%, #f8f6f3 25%, #f5f3f0 50%, #f2f0ed 75%, #f0edea 100%);
+    background: #ffffff;
 }
 
 /* Ensure both sides have same height and bottom alignment */
@@ -59,17 +70,17 @@ main > div > div {
 /* Prevent left side from shrinking during window resize */
 .lg\:w-2\/5 {
     flex-shrink: 0;
-    flex-basis: 40%; /* 40% width */
-    width: 40%; /* Force exact 40% width */
-    min-width: 40%;
-    max-width: 40%; /* Prevent any width changes */
+    flex-basis: 605px; /* Fixed pixel width - NEVER changes (20% larger total) */
+    width: 605px; /* Force exact 605px width */
+    min-width: 605px;
+    max-width: 605px; /* Prevent any width changes */
 }
 
 .lg\:w-3\/5 {
     flex-shrink: 1;
-    flex-basis: 60%; /* 60% width */
+    flex-basis: auto; /* Take remaining space */
     min-width: 0; /* Allow right side to shrink completely */
-    width: 60%; /* Fixed 60% width */
+    width: auto; /* Flexible width */
 }
 
 /* Responsive adjustments for 40/60 layout */
@@ -127,26 +138,28 @@ main > div > div {
         padding: 1.5rem 1rem;
     }
     
-    /* Mobile navigation - prevent overlap and make breadcrumb style */
+    /* Mobile navigation - compact and no wasted space */
     .lg\:w-3\/5 .absolute.top-8.right-8 {
         position: relative;
         top: auto;
         right: auto;
-        margin-bottom: 1.5rem;
+        margin-bottom: 0.5rem; /* Reduced from 1.5rem */
     }
     
     .lg\:w-3\/5 .flex.space-x-4 {
         flex-wrap: wrap;
-        gap: 0.75rem;
+        gap: 0.5rem; /* Reduced from 0.75rem */
         justify-content: flex-start;
+        margin: 0; /* Remove any default margins */
     }
     
     .lg\:w-3\/5 .flex.space-x-4 a {
-        font-size: 1rem; /* Better readable size on mobile */
-        padding: 0.25rem 0;
+        font-size: 0.9rem; /* Slightly smaller to save space */
+        padding: 0.1rem 0; /* Minimal padding */
         white-space: nowrap; /* Prevent text wrapping */
         text-decoration: underline;
         color: #2563eb;
+        margin: 0; /* Remove any default margins */
     }
     
     /* Mobile typography improvements */
@@ -176,11 +189,11 @@ main > div > div {
     
     /* Mobile content area improvements */
     #rightContent {
-        padding: 1rem;
+        padding: 0.5rem; /* Reduced from 1rem */
     }
     
     #rightContent .text-center {
-        padding: 2rem 1rem;
+        padding: 1rem 0.5rem; /* Reduced from 2rem 1rem */
     }
 }
 
