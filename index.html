@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-['Inter'] bg-gray-50">
+    <div class="min-h-screen flex flex-col">
+        <!-- Main Content -->
+        <main class="flex-1 flex flex-col lg:flex-row">
+            <!-- Left Side Content -->
+            <div class="lg:w-2/5 p-6 lg:p-12">
+                <div class="bg-white rounded-2xl shadow-lg border p-8 lg:p-10 max-w-2xl">
+                    <h1 class="text-4xl lg:text-5xl font-bold text-black mb-8">
+                        Hello, I'm <span class="text-black">losh</span>
+                    </h1>
+                    
+                    <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
+                        <p>
+                            Lorem ipsum <span class="hyperlink" onclick="displayContent('dolor')">dolor</span> sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+                        </p>
+                        
+                        <p>
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                        
+                        <p>
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                        </p>
+                        
+                        <p>
+                            <span class="hyperlink" onclick="displayContent('nemo')">Nemo enim</span> ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                        </p>
+                        
+                        <p>
+                            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                        </p>
+                    </div>
+                    
+                    <!-- Email Section -->
+                    <div class="mt-12 p-6 bg-gray-50 rounded-xl shadow-sm border">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Get in Touch</h3>
+                        <div class="flex flex-col gap-3">
+                            <input type="email" id="emailInput" placeholder="naruto@gmail.com" 
+                                   class="w-full px-4 py-3 bg-gray-200 border-0 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400 text-gray-700">
+                            <button id="sendBtn" class="w-full px-4 py-3 bg-black text-white rounded-md hover:bg-gray-800 transition-colors font-semibold">
+                                LEGGO
+                            </button>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-3">
+                            I'll get back to you as soon as possible. Looking forward to connecting with you!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Side Content Area -->
+            <div class="lg:w-3/5 p-6 lg:p-12 bg-white border-l border-gray-200 relative">
+                <!-- Navigation Links - Positioned at far right -->
+                <div class="absolute top-8 right-8">
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-lg text-blue-600 underline hover:text-blue-800 transition-colors px-3 py-2" onclick="displayContent('home')">
+                            a video
+                        </a>
+                        <a href="#" class="text-lg text-blue-600 underline hover:text-blue-800 transition-colors px-3 py-2" onclick="displayContent('yt-channel')">
+                            secret
+                        </a>
+                        <a href="#" class="text-lg text-blue-600 underline hover:text-blue-800 transition-colors px-3 py-2" onclick="displayContent('content')">
+                            linkedin
+                        </a>
+                    </div>
+                </div>
+                
+                <div id="rightContent" class="h-full">
+                    <div class="text-center text-gray-500 py-20">
+                        <p class="text-lg">Click on any navigation link to view content here</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
