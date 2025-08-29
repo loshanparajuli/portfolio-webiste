@@ -34,10 +34,58 @@
     min-height: 400px;
 }
 
-/* Responsive adjustments */
+/* Smooth gradient transition from white to creamy gray - only on left side */
+main {
+    background: #ffffff; /* Default white background */
+}
+
+/* Apply gradient only to the left side */
+.lg\:w-2\/5 {
+    background: linear-gradient(90deg, #ffffff 0%, #f8f6f3 25%, #f5f3f0 50%, #f2f0ed 75%, #f0edea 100%);
+}
+
+/* Ensure both sides have same height and bottom alignment */
+main > div {
+    display: flex;
+    flex-direction: column;
+}
+
+main > div > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Prevent left side from shrinking during window resize */
+.lg\:w-2\/5 {
+    flex-shrink: 0;
+    flex-basis: 40%; /* 40% width */
+    width: 40%; /* Force exact 40% width */
+    min-width: 40%;
+    max-width: 40%; /* Prevent any width changes */
+}
+
+.lg\:w-3\/5 {
+    flex-shrink: 1;
+    flex-basis: 60%; /* 60% width */
+    min-width: 0; /* Allow right side to shrink completely */
+    width: 60%; /* Fixed 60% width */
+}
+
+/* Responsive adjustments for 40/60 layout */
 @media (max-width: 1024px) {
-    .lg\:w-1\/2 {
+    .lg\:w-2\/5 {
         width: 100%;
+        min-width: 100%; /* Full width on mobile */
+        flex-shrink: 0; /* Prevent left side from shrinking */
+        padding: 1.5rem 1rem; /* Better padding on mobile */
+    }
+    
+    .lg\:w-3\/5 {
+        width: 100%;
+        min-width: 100%; /* Full width on mobile */
+        flex-shrink: 1; /* Allow right side to shrink */
+        padding: 1.5rem 1rem; /* Better padding on mobile */
     }
     
     .lg\:flex-row {
@@ -47,6 +95,92 @@
     .lg\:border-l {
         border-left: none;
         border-top: 1px solid #e5e7eb;
+    }
+    
+    /* Reset gradient on mobile for better performance */
+    main {
+        background: #ffffff;
+    }
+    
+    /* Better mobile spacing */
+    .p-6.lg\:p-12 {
+        padding: 1.5rem 1rem;
+    }
+}
+
+/* Desktop to mobile transition - allow right side to squeeze */
+@media (min-width: 1025px) and (max-width: 1400px) {
+    .lg\:w-3\/5 {
+        min-width: 300px; /* Allow right side to squeeze more on smaller desktop windows */
+    }
+}
+
+/* Additional responsive breakpoints */
+@media (max-width: 768px) {
+    .lg\:w-2\/5 {
+        min-width: 100%;
+        padding: 1.5rem 1rem;
+    }
+    
+    .lg\:w-3\/5 {
+        min-width: 100%;
+        padding: 1.5rem 1rem;
+    }
+    
+    /* Mobile navigation - prevent overlap and make breadcrumb style */
+    .lg\:w-3\/5 .absolute.top-8.right-8 {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-bottom: 1.5rem;
+    }
+    
+    .lg\:w-3\/5 .flex.space-x-4 {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        justify-content: flex-start;
+    }
+    
+    .lg\:w-3\/5 .flex.space-x-4 a {
+        font-size: 1rem; /* Better readable size on mobile */
+        padding: 0.25rem 0;
+        white-space: nowrap; /* Prevent text wrapping */
+        text-decoration: underline;
+        color: #2563eb;
+    }
+    
+    /* Mobile typography improvements */
+    h1 {
+        font-size: 2.5rem !important;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+    }
+    
+    .space-y-6 {
+        gap: 1.5rem;
+    }
+    
+    .space-y-6 p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    /* Mobile email section improvements */
+    .mt-12 {
+        margin-top: 2rem;
+    }
+    
+    .mt-12 .p-6 {
+        padding: 1.5rem;
+    }
+    
+    /* Mobile content area improvements */
+    #rightContent {
+        padding: 1rem;
+    }
+    
+    #rightContent .text-center {
+        padding: 2rem 1rem;
     }
 }
 

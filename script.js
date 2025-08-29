@@ -125,6 +125,16 @@ function displayContent(key) {
     
     if (content) {
         rightContent.innerHTML = content.content;
+        
+        // Auto-scroll to content on mobile devices
+        if (window.innerWidth <= 1024) {
+            setTimeout(() => {
+                rightContent.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'start' 
+                });
+            }, 100);
+        }
     } else {
         rightContent.innerHTML = `
             <div class="text-center text-gray-500 py-20">
