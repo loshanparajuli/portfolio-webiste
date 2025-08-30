@@ -19,27 +19,46 @@
                     <h1 class="text-4xl lg:text-5xl font-bold text-black mb-8">
                         Hello, I'm <span class="text-black">losh</span>
                     </h1>
+                    <h2 class="text-xl font-medium text-gray-500 mb-8">research and storyteller</h2>
                     
                     <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
-                        <p>
-                            Lorem ipsum <span class="hyperlink" onclick="displayContent('dolor')">dolor</span> sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
-                        </p>
-                        
-                        <p>
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                        
-                        <p>
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                        </p>
-                        
-                        <p>
-                            <span class="hyperlink" onclick="displayContent('nemo')">Nemo enim</span> ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-                        </p>
-                        
-                        <p>
-                            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                        </p>
+              
+    
+                        <p>i remember me being myself at the age of 9.<br>
+                        i <a href="#" class="text-blue-600 underline" id="filmedLink">filmed</a> something with a vsl camera.<br>
+                        I was holding technology, camera and a 120Volts of raw naked wire</p>
+                        <p>then, i really dont remember how i grew up but technology was all around. It was easily accesssible; at least for me.</p>
+                        <p>fly fly fly</p>
+                        <ul class="list-disc pl-6">
+                            <li>love happended</li>
+                            <li>seperated merley after 2 years</li>
+                            <li>became sad and heartbroken</li>
+                        </ul>
+                        <p>then covid happend. <b style="font-family: 'Instrument Serif', serif; font-style: italic;">Shit</b></p>
+                        <p>then, locked myself all under a  roof</p>
+                        <ul class="list-disc pl-6">
+                            <li><a href="https://react.dev/learn" class="text-blue-600 underline" target="_blank">learned programming</a></li>
+                            <li><a href="https://www.youtube.com/whylosh" class="text-blue-600 underline" target="_blank">built whylosh</a></li>
+                            <li><a href="#" class="text-blue-600 underline" id="taughtProgrammingLink">taught programming</a></li>
+                            <li>started writing</li>    
+                            <li>learned storytelling</li>
+                            <li>discovered love for filmmaking</li>
+                            <li>started <a href="https://youtube.com/live/HEF_I3RZ9b4" class="text-blue-600 underline" target="_blank">Streaming</a>. something i wanted to do since i was little</li>
+                        </ul>
+                        <p>in short; boredom turned me into a storyteller<br>
+                        created more than consumed<br>
+                        and thats <b>#1mistake.</b> <br>i was merely 18. I had world to learn, shit Indeed</p>
+                        <ul class="list-disc pl-6">
+                            <li>saw a HIRING banner</li>
+                            <li>worked with Indias <a href="https://www.youtube.com/@NitishRajput" class="text-blue-600 underline" target="_blank">Biggest</a> Creator</li>
+                            <li>left because I was incompetent</li>
+                            <li>took me a while to reaslize, and came back stronger</li>
+                            <li>sent my first ever coldemail</li>
+                            <li><a href="https://www.instagram.com/idsnepal/" class="text-blue-600 underline" target="_blank">IDS</a> happened</li>
+                            <li>working rn; 0 to #1 in the Country (<a href="https://www.linkedin.com/posts/loshanparajuli_case-study-on-in-depth-story-how-we-built-activity-7348263342173499392-Yyml" class="text-blue-600 underline" target="_blank">case study</a>)</li>
+                            <li>deligated task of my first channel as a content powerhouse</li>
+                            <li>started teaching for cause as a giveaway for the society</li>
+                        </ul>
                     </div>
                     
                     <!-- Profile Image -->
@@ -50,25 +69,45 @@
 
                         <br><p class="text-lg text-gray-700 leading-relaxed">
                           
-                            Passionate about creating meaningful content and building digital experiences that make a difference. 
-                            Let's connect and explore opportunities together.
+                            lazy, mostly tea, i love girls, i am a heavy nomad, i am mostly on the mountain, i do not own any physical asset except for a laptop, earphones and a studid dumb phone. P.S. i love pineapple the most
                         </p>
                     </div>
                     
                     <!-- Email Section -->
                     <div class="mt-12 p-6 bg-gray-50 rounded-xl shadow-sm border">
                         <h3 class="text-xl font-semibold text-gray-900 mb-4">I write, you read (i will not spam)</h3>
-                        <div class="flex flex-col gap-3">
-                            <input type="email" id="emailInput" placeholder="howfuckingsad@gmail.com" 
-                                   class="w-full px-4 py-3 bg-gray-200 border-0 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400 text-gray-700">
-                            <button id="sendBtn" class="w-full px-4 py-3 bg-black text-white rounded-md hover:bg-gray-800 transition-colors font-semibold">
+                        <form id="emailForm" action="https://formspree.io/f/mqkyovqw" method="POST" class="flex flex-col gap-3">
+                            <input type="email" name="email" id="emailInput" placeholder="howfuckingsad@gmail.com" 
+                                   class="w-full px-4 py-3 bg-gray-200 border-0 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400 text-gray-700" required>
+                            <button type="submit" id="sendBtn" class="w-full px-4 py-3 bg-black text-white rounded-md hover:bg-gray-800 transition-colors font-semibold">
                                 Yapp Me
                             </button>
-                        </div>
+                        </form>
                         <p class="text-sm text-gray-600 mt-3">
                             If you have any requestts, shoot me a mail at losh@whylosh.com. Any mail under 500 character with concice ask will be replied immediately.
                         </p>
                     </div>
+                    <script>
+                    document.getElementById('emailForm').addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        var form = e.target;
+                        var data = new FormData(form);
+                        fetch(form.action, {
+                            method: form.method,
+                            body: data,
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        }).then(function(response) {
+                            if (response.ok) {
+                                document.getElementById('sendBtn').textContent = 'Sent';
+                                document.getElementById('emailInput').value = '';
+                            } else {
+                                document.getElementById('sendBtn').textContent = 'Error';
+                            }
+                        });
+                    });
+                    </script>
                 </div>
             </div>
             
@@ -99,5 +138,104 @@
     </div>
     
     <script src="script.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var filmedLink = document.getElementById('filmedLink');
+        if (filmedLink) {
+            filmedLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                var rightContent = document.getElementById('rightContent');
+                rightContent.innerHTML = `
+                    <div class="flex flex-col items-center justify-center h-full" style="min-height: 60vh;">
+                        <div class="w-full flex justify-center" style="margin-top: 6vh;">
+                            <div class="w-full max-w-4xl aspect-video flex items-center justify-center">
+                                <iframe class="rounded-lg shadow-lg w-full h-full"
+                                    src="https://www.youtube.com/embed/HyLs-wQqW3g?autoplay=1&mute=1&controls=1&showinfo=0&modestbranding=1&rel=0&iv_load_policy=3"
+                                    frameborder="0"
+                                    allow="autoplay; encrypted-media"
+                                    allowfullscreen
+                                    referrerpolicy="no-referrer"
+                                    title="YouTube video player">
+                                </iframe>
+                            </div>
+                        </div>
+                        <p class="mt-8 text-lg text-gray-700 text-center">My first filmed video with a VSL camera</p>
+                    </div>
+                    <style>
+                        .aspect-video { aspect-ratio: 16 / 9; }
+                        @media (max-width: 1200px) {
+                            .max-w-4xl { max-width: 100vw; }
+                        }
+                    </style>
+                `;
+            });
+        }
+
+        var taughtProgrammingLink = document.getElementById('taughtProgrammingLink');
+        if (taughtProgrammingLink) {
+            taughtProgrammingLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                var rightContent = document.getElementById('rightContent');
+                rightContent.innerHTML = `
+                    <div class="flex flex-col items-center justify-center h-full" style="min-height: 60vh;">
+                        <div class="w-full flex justify-center" style="margin-top: 6vh;">
+                            <div class="w-full max-w-4xl aspect-video flex items-center justify-center">
+                                <iframe class="rounded-lg shadow-lg w-full h-full"
+                                    src="https://www.youtube.com/embed/tQlNZDmPLto?autoplay=1&mute=1&controls=1&showinfo=0&modestbranding=1&rel=0&iv_load_policy=3"
+                                    frameborder="0"
+                                    allow="autoplay; encrypted-media"
+                                    allowfullscreen
+                                    referrerpolicy="no-referrer"
+                                    title="YouTube video player">
+                                </iframe>
+                            </div>
+                        </div>
+                        <p class="mt-8 text-lg text-gray-700 text-center">Taught programming session</p>
+                    </div>
+                    <style>
+                        .aspect-video { aspect-ratio: 16 / 9; }
+                        @media (max-width: 1200px) {
+                            .max-w-4xl { max-width: 100vw; }
+                        }
+                    </style>
+                `;
+            });
+        }
+    });
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var filmedLink = document.getElementById('filmedLink');
+        if (filmedLink) {
+            filmedLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                var rightContent = document.getElementById('rightContent');
+                rightContent.innerHTML = `
+                    <div class="flex flex-col items-center justify-center h-full" style="min-height: 60vh;">
+                        <div class="w-full flex justify-center" style="margin-top: 6vh;">
+                            <div class="w-full max-4w-xl aspect-video flex items-center justify-center">
+                                <iframe class="rounded-lg shadow-lg w-full h-full"
+                                    src="https://www.youtube.com/embed/HyLs-wQqW3g?autoplay=1&mute=1&controls=0&showinfo=0&modestbranding=1&rel=0&iv_load_policy=3"
+                                    frameborder="0"
+                                    allow="autoplay; encrypted-media"
+                                    allowfullscreen
+                                    referrerpolicy="no-referrer"
+                                    title="YouTube video player">
+                                </iframe>
+                            </div>
+                        </div>
+                        <p class="mt-8 text-lg text-gray-700 text-center">My first filmed video with a VSL camera</p>
+                    </div>
+                    <style>
+                        .aspect-video { aspect-ratio: 16 / 9; }
+                        @media (max-width: 1200px) {
+                            .max-w-4xl { max-width: 100vw; }
+                        }
+                    </style>
+                `;
+            });
+        }
+    });
+    </script>
 </body>
 </html>
